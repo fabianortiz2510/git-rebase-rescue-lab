@@ -11,3 +11,10 @@ def normalize_scales(numbers):
     arr = np.array(numbers)
     if arr.size == 0: return []
     return ((arr - arr.min()) / (arr.max() - arr.min())).tolist()
+
+def filter_by_length(items, min_length=3):
+    """
+    Filtra una lista devolviendo solo los elementos que 
+    tienen una longitud mayor o igual al mínimo especificado.
+    """
+    return [item for item in items if len(str(item)) >= min_length]
