@@ -1,8 +1,10 @@
 # REBASE PROBLEM
 ## STRUCTURE
 
+This repository is designed to assure the modularity and the final documentation and record for project branch management, in this case it was settled a shared environment to take control over required changes and adjustments during the development process.
 
-I have a repositore with follow structure
+The project was designed based on the following structure:
+
 
 ```
 git-rebase-rescue-lab/
@@ -15,42 +17,57 @@ git-rebase-rescue-lab/
     ├── rebase_walkthrough.md
     └── conflict_resolution_notes.md
 ```
-Se realiza el commit con la estructura del proyecto como se observa en la siguiente imágen.
+
+## DEPLOYMENT 
+
+It was pushed the commit acordin to the instructions showed below.
 
 ![alt text](image-1.png)
 
-Se realiza la creación del escenario en el cual inicialmente en la rama main realizando tres  commits; A y B.
+It was created the first scenario where adjustments are controlled in the main branch.
 
-Commit A (Rama main): 
+### Commit A (main branch): Create the first function for data processing.
 
 ![alt text](image-2.png)
 
-Commit B (Rama main): 
+### Commit B (main branch): Create the second function for data processing.
  
  ![alt text](image-3.png)
 
-Se realiza la creación de la otra rama: feature/data-cleaning y se realiza un commit D creando otra función 
+Create the branch "feature/data-cleaning" and push the commit creating another function.
 
-Commit 4 (feature/data-cleaning): 
+### Commit 4 (feature/data-cleaning): 
 
 ![alt text](image-4.png)
 
-Posteriormente se vuelve a la rama main y se crea otra función:
+Subsequently return to the main branch and create the function
 
 ![alt text](image-5.png)
 
-Posteriormente se vuelve a la rama feature/data-cleaning y se realiza rebase creando un conflicto.
+Then,  back to the "feature/data_cleanuing" branch a rebase is made to create a conflict.
 
 ![alt text](image-6.png)
 
 ![alt text](image-7.png)
 
-Cuando se observan los errores en la codificación de las dos ramas. Para este caso se da click en "Accept Combination" para no perder ninguna funcionalidad.
-
-Posteriormente se realiza un push normal el cual es denegado debido a que git interpreta  que si acepta el push normal perderá información antigua.
+When any issue is found in the process for both branches. Is possible to fix it by clicking on "Accept Combination" ro recover all functions. After that, it is executed a normal push that is denied at this point because git recognize a normal push as a loss of information. 
 
 ![alt text](image-8.png)
 
-La solución para que ignore el historial anterior y acepte la nueva estructura del repositorio, se realiza un push forzado solucionando el conflicto que se habia generado.
+The way to ignore th previous information in both branches and set the new repository structure, is through a forced push to solve the previous conflict.
 
 ![alt text](image-9.png)
+
+As part of the verification and security protocol, it was used a "git reflog" command in order to verify the commit history within the project and visualize it with conflict correction.
+
+![alt text](image-10.png)
+
+Finally its executed a "git log --oneline --graph --decorate --all" command where the structure repository is showed and a clean an linear structure is obtained.
+
+![alt text](image-11.png)
+
+Author: Fabian Leonardo Ortiz Cuevas
+
+Electronic Engineer
+
+Email: fabioleorcu20@gmail.com 
